@@ -21,7 +21,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
