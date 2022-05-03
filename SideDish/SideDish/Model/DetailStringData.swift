@@ -10,13 +10,15 @@ struct DetailStringData {
 
     init(entity: DetailData) {
         description = entity.productDescription
-        finalPrice = entity.prices[0]
         point = entity.point
         deliveryInfo = entity.deliveryInfo
         deliveryFee = entity.deliveryFee
 
         if entity.prices.count > 1 {
-            normalPrice = entity.prices[1]
+            normalPrice = entity.prices[0]
+            finalPrice = entity.prices[1]
+        } else {
+            finalPrice = entity.prices[0]
         }
     }
 }
